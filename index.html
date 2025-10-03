@@ -1,0 +1,31 @@
+const DELAY_MS = 5000; // 5 seconds
+const modal = document.getElementById('emailModal');
+const form = document.getElementById('emailForm');
+const thankYou = document.getElementById('thankYou');
+
+// Show popup after delay, always
+setTimeout(() => {
+  modal.style.display = 'flex';
+}, DELAY_MS);
+
+// Handle form submission
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      form.style.display = 'none';
+      thankYou.style.display = 'block';
+      setTimeout(() => modal.style.display = 'none', 1500);
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch {
+    alert("Something went wrong. Please try again.");
+  }
+});
