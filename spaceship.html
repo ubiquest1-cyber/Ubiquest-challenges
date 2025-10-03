@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Escape Game – Spaceship Challenge</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    color: #333;
+  }
+  img.logo {
+    width: 200px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  p.intro {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    line-height: 1.5;
+  }
+  img.activity-img {
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: #005bb5;
+    margin-top: 30px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul, ol {
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+
+  /* Collapsible button */
+  .collapsible {
+    background-color: #0073e6;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    font-size: 1em;
+    transition: background 0.3s;
+  }
+  .collapsible:hover {
+    background-color: #005bb5;
+  }
+  .content {
+    max-width: 700px;
+    margin: 0 auto 20px;
+    padding: 0 15px;
+    display: none;
+    text-align: left;
+  }
+
+  /* QR code styling */
+  .qr-code {
+    width: 150px;
+    margin: 15px 0;
+  }
+</style>
+</head>
+<body>
+  <img src="https://www.ubi-quest.com/wp-content/uploads/2017/09/logo-ubiquest-white-autour.png" 
+       alt="Ubiquest Logo" class="logo">
+
+  <h1>Mobile Escape Game – Spaceship Challenge</h1>
+
+  <img src="https://www.ubi-quest.com/wp-content/uploads/2025/10/lucid_origin_spaceship_floating_in_the_middle_of_space_colorfu_3.jpg" 
+       alt="Spaceship Challenge" class="activity-img">
+
+  <p class="intro">
+    Your team is stranded on a spaceship in the middle of space! In this interactive adventure, 
+    you must make quick decisions, solve puzzles, and cooperate to repair your ship before an alien attack reaches you. 
+    Duration: ~25 minutes. This challenge strengthens teamwork, strategic thinking, and communication under pressure.
+  </p>
+
+  <h2>Materials Needed</h2>
+  <ul>
+    <li>1 smartphone per team (2–4 members max)</li>
+    <li>Actionbound app installed (<a href="https://apps.apple.com/app/id1035450896" target="_blank">iOS</a> / <a href="https://play.google.com/store/apps/details?id=de.actionbound" target="_blank">Android</a>)</li>
+    <li>Access to Wi-Fi or mobile data</li>
+    <li>QR code for the challenge (replace with actual code)</li>
+  </ul>
+
+  <h2>Operation Instructions</h2>
+  <ol>
+    <li>
+      <strong>Form Teams:</strong> Organize teams of 2–4 members.
+    </li>
+    <li>
+      <strong>Install & Launch Actionbound:</strong> Download the Actionbound app for iOS or Android.
+    </li>
+    <li>
+      <strong>Scan QR Code:</strong> Use your smartphone to scan the QR code below to access the adventure.
+      <br><img src="https://via.placeholder.com/150?text=QR+Code" alt="QR Code" class="qr-code">
+    </li>
+    <li>
+      <strong>Choose Team Name:</strong> Enter your team name when prompted.
+    </li>
+    <li>
+      <strong>Optional Challenge:</strong> Set a timer to 10 minutes and see if your team can complete the adventure faster.
+    </li>
+    <li>
+      <strong>Follow Onscreen Instructions:</strong> Solve puzzles, make decisions together, and advance through the adventure until the mission is complete.
+    </li>
+  </ol>
+
+  <h2>Debrief Guidelines</h2>
+  <ul>
+    <li>Discuss the key decisions your team made and the reasoning behind them.</li>
+    <li>Identify moments where communication succeeded or could have been improved.</li>
+    <li>Reflect on time management and strategic planning during the challenge.</li>
+    <li>Consider how roles and responsibilities were shared and how collaboration impacted outcomes.</li>
+    <li>Share feelings and surprises that occurred during the adventure.</li>
+  </ul>
+
+  <!-- Collapsible Expert List -->
+  <button class="collapsible">Show Expert Tips</button>
+  <div class="content">
+    <h2>Expert Tips</h2>
+    <ul>
+      <li>Pay attention to all clues provided on the screen; small details can be crucial.</li>
+      <li>Discuss each decision as a team before acting—avoid acting individually.</li>
+      <li>Keep track of time and pace yourselves to avoid rushing important tasks.</li>
+      <li>Assign roles: navigator, clue decoder, communicator to optimize teamwork.</li>
+      <li>Encourage every team member to contribute and share ideas openly.</li>
+    </ul>
+  </div>
+
+<script>
+  const coll = document.querySelector(".collapsible");
+  const content = document.querySelector(".content");
+  coll.addEventListener("click", function() {
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      coll.textContent = "Show Expert Tips";
+    } else {
+      content.style.display = "block";
+      coll.textContent = "Hide Expert Tips";
+    }
+  });
+</script>
+</body>
+</html>

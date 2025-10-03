@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubiquest Team-Building Mini Challenges</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9; /* subtle light background */
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  img.logo {
+    width: 180px; /* slightly smaller than before */
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  p.intro {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  /* Activity layout */
+  .links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .activity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 220px;
+    text-align: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  .activity:hover {
+    transform: translateY(-5px);
+  }
+  .activity-img {
+    width: 150px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+  }
+  .activity-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background 0.3s;
+  }
+  .activity-btn:hover {
+    background: #005bb5;
+  }
+  .activity-desc {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.3;
+  }
+
+  /* Modal overlay */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.75); /* slightly darker overlay */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    max-width: 380px;
+    width: 100%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  }
+  .modal-content input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    margin: 12px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+  }
+  .modal-content button {
+    padding: 10px 22px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  .modal-content button:hover {
+    background: #005bb5;
+  }
+  #thankYou {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 650px) {
+    .links {
+      flex-direction: column;
+      gap: 25px;
+    }
+    .activity {
+      max-width: 90%;
+      padding: 20px;
+    }
+    .activity-img {
+      width: 180px;
+    }
+  }
+</style>
+</head>
+<body>
+  <img src="https://www.ubi-quest.com/wp-content/uploads/2017/09/logo-ubiquest-white-autour.png" 
+       alt="Ubiquest Logo" class="logo">
+
+  <h1>Ubiquest Team-Building Mini Challenges</h1>
+  <p class="intro">
+    Welcome! 🎉 As a thank-you gift, we’re offering you three guided activities 
+    to try with your team. Each one explores a different side of collaboration 
+    and can fit into a short break. Together, they form a one-hour session.
+  </p>
+
+  <div class="links">
+    <div class="activity">
+      <img src="https://www.ubi-quest.com/wp-content/uploads/2025/10/lucid_origin_four_adults_standing_together_smiling_and_chattin_1.jpg" alt="Improv Warmups" class="activity-img">
+      <a href="Improv.pdf" target="_blank" class="activity-btn">Activity 1: Improv Warmups (15 min)</a>
+      <p class="activity-desc">A series of fun improvisation exercises to energize your team and build creativity.</p>
+    </div>
+
+    <div class="activity">
+      <img src="https://www.ubi-quest.com/wp-content/uploads/2025/10/lucid_origin_small_boat_sinking_in_water_with_a_crew_showing_s_0.jpg" alt="Lost at Sea" class="activity-img">
+      <a href="LostAtSea.pdf" target="_blank" class="activity-btn">Activity 2: Lost at Sea (20 min)</a>
+      <p class="activity-desc">Your team is stranded in the middle of the ocean. Compare your choices and decide what’s most important to survive.</p>
+    </div>
+
+    <div class="activity">
+      <img src="https://www.ubi-quest.com/wp-content/uploads/2025/10/lucid_origin_spaceship_floating_in_the_middle_of_space_colorfu_3.jpg" alt="Mobile Escape Game" class="activity-img">
+      <a href="EscapeGame.pdf" target="_blank" class="activity-btn">Activity 3: Mobile Escape Game (25 min)</a>
+      <p class="activity-desc">A short decision-making adventure where your spaceship has stopped and you must escape before an alien attacks.</p>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="modal" id="emailModal">
+    <div class="modal-content">
+      <h2>Enter your email</h2>
+      <form id="emailForm" action="https://formspree.io/f/manpjvgq" method="POST">
+        <input type="email" name="email" placeholder="Your email" required>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="thankYou">Thank you!</p>
+    </div>
+  </div>
+
+<script>
+  const DELAY_MS = 5000; // 5 seconds
+  const modal = document.getElementById('emailModal');
+  const form = document.getElementById('emailForm');
+  const thankYou = document.getElementById('thankYou');
+
+  // Show popup only if email not submitted
+  if (!localStorage.getItem('emailSubmitted')) {
+    setTimeout(() => { modal.style.display = 'flex'; }, DELAY_MS);
+  }
+
+  // Handle form submission
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+        localStorage.setItem('emailSubmitted', 'true');
+        setTimeout(() => modal.style.display = 'none', 1500);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch {
+      alert("Something went wrong. Please try again.");
+    }
+  });
+</script>
+</body>
+</html>
