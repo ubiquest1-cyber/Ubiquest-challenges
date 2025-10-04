@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ubiquest Improv Workshop</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+  img.logo {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    color: #333;
+  }
+  p.intro {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+    line-height: 1.4;
+    color: #555;
+  }
+  .activity-img {
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    color: #0073e6;
+  }
+  ol {
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  li {
+    margin-bottom: 12px;
+  }
+  .toggle-btn {
+    padding: 10px 15px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  .toggle-btn:hover {
+    background: #005bb5;
+  }
+  #expertTips {
+    text-align: left;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #0073e6;
+    border-radius: 8px;
+    background: #f0f8ff;
+    display: none; /* hidden on load */
+  }
+  #expertTips ul {
+    padding-left: 20px;
+  }
+</style>
+</head>
+<body>
+  <img src="https://www.ubi-quest.com/wp-content/uploads/2017/09/logo-ubiquest-white-autour.png" alt="Ubiquest Logo" class="logo">
+  
+  <h1>Improv Workshop</h1>
+  <p class="intro">
+    Welcome to our Improv Workshop! These exercises are designed to energize your team, improve collaboration, and stimulate creativity. Keep an open mind, have fun, and let your imagination flow.
+  </p>
+
+  <img src="https://www.ubi-quest.com/wp-content/uploads/2025/10/lucid_origin_four_adults_standing_together_smiling_and_chattin_1.jpg" alt="Improv Workshop" class="activity-img">
+
+  <h2>Instructions</h2>
+  <p>Prepare a comfortable space where participants can move freely. Gather up to 10 people if possible.</p>
+
+  <ol>
+    <li>
+      <strong>Warm Up (5 min):</strong> Form a circle. One person throws a word to another player while pointing at them. The next player must respond with a new word and pass it along. React naturally, don’t overthink, and smile at the silly associations.
+    </li>
+    <li>
+      <strong>One Word Story (5 min):</strong> Create a story together, with each participant contributing one word at a time. Keep it flowing and spontaneous, focusing on teamwork and creativity.
+    </li>
+    <li>
+      <strong>What Are You Doing? (5 min):</strong> One player mimes an activity. After 10 seconds, the next player asks "What are you doing?" The first player must reply with a different activity while continuing to mime. Continue around the group. Don’t prepare answers in advance.
+    </li>
+  </ol>
+
+  <h2>Debrief</h2>
+  <ul style="text-align:left; max-width:700px; margin: 0 auto 20px;">
+    <li>Reflect on moments of creativity and collaboration.</li>
+    <li>Discuss how quick thinking impacted the flow of exercises.</li>
+    <li>Highlight how non-verbal communication supported teamwork.</li>
+    <li>Share observations about letting go of judgment and embracing spontaneity.</li>
+  </ul>
+
+  <button class="toggle-btn" id="toggleExpert">Show / Hide Expert Tips</button>
+  <div id="expertTips">
+    <h2>Expert Tips</h2>
+    <ul>
+      <li>Encourage all participants to engage; there are no wrong answers in improv.</li>
+      <li>Keep energy high: laughter and fun are key.</li>
+      <li>Focus on “Yes, and…” thinking – accept and build on others’ ideas.</li>
+      <li>Rotate roles to ensure everyone contributes actively.</li>
+      <li>During debrief, highlight creativity, teamwork, and quick thinking.</li>
+      <li>Observe body language and reactions – they are crucial for communication skills.</li>
+      <li>Adapt exercises for limited space: smaller circles or fewer participants work fine.</li>
+    </ul>
+  </div>
+
+<script>
+  const toggleBtn = document.getElementById('toggleExpert');
+  const expertDiv = document.getElementById('expertTips');
+
+  toggleBtn.addEventListener('click', () => {
+    if (expertDiv.style.display === 'none' || expertDiv.style.display === '') {
+      expertDiv.style.display = 'block';
+      toggleBtn.textContent = "Hide Expert Tips";
+    } else {
+      expertDiv.style.display = 'none';
+      toggleBtn.textContent = "Show / Hide Expert Tips";
+    }
+  });
+</script>
+</body>
+</html>
